@@ -4,7 +4,7 @@ import MultilingualName from './MultilingualName';
 
 export default function Hero() {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white via-white to-gray-50 dark:from-black dark:via-gray-900 dark:to-gray-800 pt-20">
+    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white via-white to-gray-50 dark:from-black dark:via-gray-900 dark:to-black pt-20">
       <div className="container mx-auto px-6">
         
         <motion.div

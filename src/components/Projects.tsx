@@ -37,7 +37,7 @@ export default function Projects() {
   });
 
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-200">
+    <section id="projects" className="py-20 bg-gray-50 dark:bg-black transition-colors duration-200">
       <div className="container mx-auto px-6">
         <motion.div
           ref={ref}
@@ -54,7 +54,7 @@ export default function Projects() {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 whileHover={{ y: -10 }}
-                className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-white dark:bg-black rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img 
@@ -62,6 +62,8 @@ export default function Projects() {
                     alt={project.title}
                     className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
                   />
+                  {/* Gradient overlay for dark mode */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent dark:opacity-100 opacity-0"></div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2 dark:text-white">{project.title}</h3>

@@ -59,7 +59,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-200">
+    <section id="contact" className="py-20 bg-white dark:bg-black transition-colors duration-200">
       <Toaster position="top-right" />
       <div className="container mx-auto px-6">
         <motion.div
