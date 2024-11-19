@@ -5,8 +5,10 @@ export default function Footer() {
   const socialLinks = [
     { icon: <Github className="w-5 h-5" />, href: "https://github.com", label: "GitHub" },
     { icon: <Linkedin className="w-5 h-5" />, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: <Mail className="w-5 h-5" />, href: "mailto:contact@example.com", label: "Email" }
+    { icon: <Mail className="w-5 h-5" />, href: "mailto:contact@example.com", label: "Email" },
   ];
+
+  const tools = ["MERN-Stack", "MySql", "TypeScript", "SpringBoot", "Angular"];
 
   return (
     <footer className="bg-white dark:bg-gray-900 py-12 transition-colors duration-200">
@@ -34,11 +36,11 @@ export default function Footer() {
                 ))}
               </div>
             </div>
-            
+
             <div>
               <h3 className="text-xl font-bold mb-4 dark:text-white">Quick Links</h3>
               <ul className="space-y-2">
-                {['Home', 'Projects', 'Experience', 'Contact'].map((item, index) => (
+                {["Home", "Projects", "Experience", "Contact"].map((item, index) => (
                   <li key={index}>
                     <a
                       href={`#${item.toLowerCase()}`}
@@ -50,28 +52,25 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
-            
+
             <div>
-              <h3 className="text-xl font-bold mb-4 dark:text-white">Newsletter</h3>
+              <h3 className="text-xl font-bold mb-4 dark:text-white">Tech Stack & Tools</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Subscribe to my newsletter for updates
+                Here are some of the technologies and tools I work with:
               </p>
-              <form className="flex gap-2">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-2 rounded-lg border dark:border-gray-700 dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-600"
-                />
-                <button
-                  type="submit"
-                  className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
-                >
-                  Subscribe
-                </button>
-              </form>
+              <ul className="space-y-2">
+                {tools.map((tool, index) => (
+                  <li
+                    key={index}
+                    className="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                  >
+                    {tool}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
-          
+
           <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
             <p className="text-center text-gray-600 dark:text-gray-300">
               © {new Date().getFullYear()} Your Name. All rights reserved.

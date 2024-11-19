@@ -1,16 +1,66 @@
-import React from 'react';
+import  { useState, FormEvent } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Loader2 } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+import toast, { Toaster } from 'react-hot-toast';
+
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+const initialFormData: FormData = {
+  name: '',
+  email: '',
+  message: ''
+};
 
 export default function Contact() {
+  const [formData, setFormData] = useState<FormData>(initialFormData);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
   });
 
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        'service_sb6vzws', // EmailJS service ID
+        'template_aj4eer5', // EmailJS template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        'hXFroYNGTbwQUm9NK' //EmailJS public key
+      );
+
+      toast.success('Message sent successfully!');
+      setFormData(initialFormData);
+    } catch (error) {
+      toast.error('Failed to send message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
   return (
     <section id="contact" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-200">
+      <Toaster position="top-right" />
       <div className="container mx-auto px-6">
         <motion.div
           ref={ref}
@@ -30,8 +80,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-gray-600 dark:text-gray-400">Email</p>
-                    <a href="mailto:your.email@example.com" className="text-purple-600 dark:text-purple-400 hover:underline">
-                      your.email@example.com
+                    <a href="mailto:umangraj1001@gmail.com" className="text-purple-600 dark:text-purple-400 hover:underline">
+                    umangraj1001@gmail.com
                     </a>
                   </div>
                 </div>
@@ -41,8 +91,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-gray-600 dark:text-gray-400">Phone</p>
-                    <a href="tel:+1234567890" className="text-purple-600 dark:text-purple-400 hover:underline">
-                      +1 (234) 567-890
+                    <a href="tel:+91-7766014193" className="text-purple-600 dark:text-purple-400 hover:underline">
+                      +91-7766014193
                     </a>
                   </div>
                 </div>
@@ -52,13 +102,13 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-gray-600 dark:text-gray-400">Location</p>
-                    <p className="text-purple-600 dark:text-purple-400">San Francisco, CA</p>
+                    <p className="text-purple-600 dark:text-purple-400">Ranchi, India</p>
                   </div>
                 </div>
               </div>
             </div>
             <div>
-              <form className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Name
@@ -66,6 +116,10 @@ export default function Contact() {
                   <input
                     type="text"
                     id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
                     className="w-full px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent dark:text-white"
                   />
                 </div>
@@ -76,6 +130,10 @@ export default function Contact() {
                   <input
                     type="email"
                     id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
                     className="w-full px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent dark:text-white"
                   />
                 </div>
@@ -85,15 +143,27 @@ export default function Contact() {
                   </label>
                   <textarea
                     id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
                     rows={4}
                     className="w-full px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent dark:text-white"
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+                  disabled={isSubmitting}
+                  className="w-full px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
-                  Send Message
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    'Send Message'
+                  )}
                 </button>
               </form>
             </div>
