@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  cursor: none; /* Matches global.css */
+}
+
+body {
+  @apply text-gray-800 dark:text-gray-200 bg-white dark:bg-black;
+}
+
+::selection {
+  @apply bg-purple-200 dark:bg-purple-900;
+}
+
+.dark ::selection {
+  @apply bg-purple-800 text-white;
+}
+
+/* Custom Cursor */
+.cursor {
+  @apply fixed w-8 h-8 rounded-full pointer-events-none z-50 mix-blend-difference;
+  background: white;
+  border: 2px solid rgb(147, 51, 234); /* Added border from global.css */
+  transition: transform 0.2s ease;
+}
+
+.cursor-dot {
+  @apply fixed w-2 h-2 rounded-full pointer-events-none z-50 bg-purple-600 dark:bg-purple-400;
+  transition: transform 0.1s ease;
+}
+
+/* Hero Section Cursor */
+#hero {
+  cursor: none; /* Matches global.css */
+}
+
+/* General Cursor Reset */
+* {
+  cursor: default; /* Matches global.css */
+}
+
+/* Hover Effects for Skill Cards */
+.skill-card {
+  @apply relative overflow-hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 opacity-0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-card:hover::before {
+  @apply opacity-100;
+}
