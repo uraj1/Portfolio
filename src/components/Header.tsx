@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail } from 'lucide-react';
 
@@ -20,19 +19,19 @@ export default function Header() {
           Portfolio
         </motion.div>
         <div className="flex items-center gap-6">
-          <a href="#about" className="hover:text-purple-600 dark:text-gray-300 dark:hover:text-purple-400 transition-colors">About</a>
+          <a href="#skills" className="hover:text-purple-600 dark:text-gray-300 dark:hover:text-purple-400 transition-colors">Skills</a>
           <a href="#experience" className="hover:text-purple-600 dark:text-gray-300 dark:hover:text-purple-400 transition-colors">Experience</a>
           <a href="#projects" className="hover:text-purple-600 dark:text-gray-300 dark:hover:text-purple-400 transition-colors">Projects</a>
           <a href="#contact" className="hover:text-purple-600 dark:text-gray-300 dark:hover:text-purple-400 transition-colors">Contact</a>
         </div>
         <div className="flex items-center gap-4">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/uraj1" target="_blank" rel="noopener noreferrer">
             <Github className="w-5 h-5 hover:text-purple-600 dark:text-gray-300 dark:hover:text-purple-400 transition-colors" />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://in.linkedin.com/in/umang-raj-verma-538562283" target="_blank" rel="noopener noreferrer">
             <Linkedin className="w-5 h-5 hover:text-purple-600 dark:text-gray-300 dark:hover:text-purple-400 transition-colors" />
           </a>
-          <a href="mailto:your.email@example.com">
+          <a href="mailto:umangraj1001@gmail.com">
             <Mail className="w-5 h-5 hover:text-purple-600 dark:text-gray-300 dark:hover:text-purple-400 transition-colors" />
           </a>
         </div>

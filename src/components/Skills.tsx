@@ -42,7 +42,7 @@ export default function Skills() {
   });
 
   return (
-    <section className="py-20 bg-gray-50 dark:bg-black transition-colors duration-200">
+    <section id= "skills" className="py-20 bg-gray-50 dark:bg-black transition-colors duration-200">
       <div className="container mx-auto px-6">
         <motion.div
           ref={ref}
