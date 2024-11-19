@@ -42,7 +42,10 @@ export default function Skills() {
   });
 
   return (
-    <section id= "skills" className="py-20 bg-gray-50 dark:bg-black transition-colors duration-200">
+    <section
+      id="skills"
+      className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-200"
+    >
       <div className="container mx-auto px-6">
         <motion.div
           ref={ref}
@@ -50,7 +53,9 @@ export default function Skills() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">Skills & Expertise</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">
+            Skills & Expertise
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skills.map((skill, index) => (
               <motion.div
@@ -58,13 +63,15 @@ export default function Skills() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="skill-card bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg group"
+                className="skill-card bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg group"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-lg flex items-center justify-center text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform">
                     {skill.icon}
                   </div>
-                  <h3 className="text-xl font-semibold dark:text-white">{skill.category}</h3>
+                  <h3 className="text-xl font-semibold dark:text-white">
+                    {skill.category}
+                  </h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {skill.items.map((item, i) => (

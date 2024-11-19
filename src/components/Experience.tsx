@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Briefcase, Download } from 'lucide-react';
@@ -40,6 +39,16 @@ export default function Experience() {
     threshold: 0.1,
   });
 
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = "https://drive.google.com/file/d/1Y743OnxQ78GYIJvIZjqETClXtOAesbZh/view?usp=sharing";
+    link.download = "Umang_Resume.pdf"; 
+    link.target = "_blank";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section
       id="experience"
@@ -57,14 +66,13 @@ export default function Experience() {
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
               Professional Experience
             </h2>
-            <a
-              href="/resume.pdf"
-              download
+            <button
+              onClick={handleDownload}
               className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
             >
               <Download className="w-4 h-4" />
               Download Resume
-            </a>
+            </button>
           </div>
 
           <div className="relative">
