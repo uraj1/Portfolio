@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import MultilingualName from './MultilingualName';
@@ -7,10 +6,11 @@ export default function Hero() {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white via-white to-gray-50 dark:from-black dark:via-gray-900 dark:to-gray-800 pt-20">
       <div className="container mx-auto px-6">
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1.5 }}
           className="max-w-4xl mx-auto text-center space-y-8"
         >
           <MultilingualName />
