@@ -16,36 +16,48 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "E-commerce Platform",
+    title: "CryptoXplorer",
     description:
-      "A full-featured e-commerce platform built with React and Node.js",
+      "A crypto app which is made using React Js and its UI library. ",
     image:
-      "https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&q=80&w=800",
-    tech: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-    github: "https://github.com",
-    live: "https://example.com",
+      "freepik__crypto-currency__51080.jpeg",
+    tech: ["React", "Chakra UI", "Node.js", "REST API"],
+    github: "https://github.com/uraj1/CryptoXplorer",
+    live: "https://cryptoxplorerapp.netlify.app/",
     size: "large",
   },
   {
-    title: "Portfolio Website",
-    description: "A modern portfolio website with smooth animations",
+    title: "GitHub Repositories Viewer",
+    description: "This web app showcases a user's profile, including bio and location.",
     image:
-      "https://images.unsplash.com/photo-1517292987719-0369a794ec0f?auto=format&fit=crop&q=80&w=800",
+      "freepik__candid-image-photography-natural-textures-highly-r__51079.jpeg",
     tech: ["React", "Tailwind CSS"],
-    github: "https://github.com",
-    live: "https://example.com",
+    github: "https://github.com/uraj1/Github-Repo-Viewer",
+    live: "https://github-repositories-viewer.netlify.app/",
     size: "medium",
   },
   {
-    title: "Task Management App",
-    description: "A collaborative task management application",
+    title: "Text to Speech",
+    description: "Tool to transform written content into natural-sounding audio",
     image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800",
-    tech: ["React", "Firebase", "Material-UI"],
-    github: "https://github.com",
-    live: "https://example.com",
+      "589395c0-ec14-4844-9674-a27e76ef8f55.jfif",
+    tech: ["React", "Material-UI"],
+    github: "https://text-to-speech-ur.netlify.app/",
+    live: "https://text-to-speech-ur.netlify.app/",
     size: "medium",
   },
+  
+  {
+    title: "PicMosaic",
+    description: "PicMosaic utilizes AI to craft diverse images from user prompts",
+    image:
+      "bce36a86-265b-42fd-acb8-2388b5898189.jfif",
+    tech: ["React", "Node.js", "OpenAi API", "Express"],
+    github: "https://github.com/uraj1/PicMosaic",
+    live: "https://picmosaic.netlify.app/ ",
+    size: "large",
+  },
+  
 ];
 
 export default function DemoProjects() {
@@ -134,7 +146,7 @@ export default function DemoProjects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm font-medium text-black  dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors"
+                      className="flex items-center gap-2 text-sm cursor-pointer font-medium text-black  dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors"
                     >
                       <Github className="w-4 h-4" />
                       Code
@@ -143,7 +155,7 @@ export default function DemoProjects() {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm font-medium text-black dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors"
+                      className="flex items-center gap-2 text-sm cursor-pointer font-medium text-black dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors"
                     >
                       <ExternalLink className="w-4 h-4" />
                       Live Demo
