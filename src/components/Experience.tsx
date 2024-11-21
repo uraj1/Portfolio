@@ -4,33 +4,33 @@ import { Briefcase, Download } from 'lucide-react';
 
 const experiences = [
   {
-    title: "Senior Frontend Developer",
-    company: "Tech Corp",
-    period: "2021 - Present",
-    description: "Led development of multiple high-impact web applications using React and TypeScript.",
+    title: "Software Developer",
+    company: "Atos Syntel (Eviden)",
+    period: "Jan. 2024 - April 2024",
+    description: "Developed attendance tracking, time logging, user authentication, automated birthday emails, and data export using Angular, Spring Boot, and MySQL.",
     side: "right",
   },
   {
-    title: "UI/UX Designer",
-    company: "Design Studio",
-    period: "2019 - 2021",
-    description: "Created user-centered designs for various clients across different industries.",
+    title: "GSSOC’24 Contributor",
+    company: "GSSOC",
+    period: "April 2024 - Aug. 2024",
+    description: "Enhanced code quality, added new features, and fixed 50+ bugs across projects, showcasing technical and collaborative expertise.",
     side: "left",
   },
   {
-    title: "Full Stack Developer",
-    company: "Innovation Labs",
-    period: "2018 - 2019",
-    description: "Developed full-stack applications using modern technologies and best practices.",
+    title: "Secretary",
+    company: "Colours",
+    period: "July 2024 - Present",
+    description: "Led Colours, a mental health management club, organizing initiatives and managing a team to promote awareness and support.",
     side: "right",
   },
-  {
-    title: "Junior Developer",
-    company: "Startup Inc",
-    period: "2017 - 2018",
-    description: "Developed and maintained various web applications using modern technologies.",
-    side: "left",
-  },
+  // {
+  //   title: "Junior Developer",
+  //   company: "Startup Inc",
+  //   period: "2017 - 2018",
+  //   description: "Developed and maintained various web applications using modern technologies.",
+  //   side: "left",
+  // },
 ];
 
 export default function Experience() {
