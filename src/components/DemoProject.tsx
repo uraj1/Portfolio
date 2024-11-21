@@ -20,17 +20,17 @@ const projects: Project[] = [
     description:
       "A crypto app which is made using React Js and its UI library. ",
     image:
-      "freepik__crypto-currency__51080.jpeg",
+      "/src/assests/freepik__crypto-currency__51080.jpeg",
     tech: ["React", "Chakra UI", "Node.js", "REST API"],
     github: "https://github.com/uraj1/CryptoXplorer",
     live: "https://cryptoxplorerapp.netlify.app/",
     size: "large",
   },
   {
-    title: "GitHub Repositories Viewer",
-    description: "This web app showcases a user's profile, including bio and location.",
+    title: "GitHub Repo. Viewer",
+    description: "This web app showcases a user's profile, bio and location.",
     image:
-      "freepik__candid-image-photography-natural-textures-highly-r__51079.jpeg",
+      "/src/assests/freepik__candid-image-photography-natural-textures-highly-r__51079.jpeg",
     tech: ["React", "Tailwind CSS"],
     github: "https://github.com/uraj1/Github-Repo-Viewer",
     live: "https://github-repositories-viewer.netlify.app/",
@@ -40,7 +40,7 @@ const projects: Project[] = [
     title: "Text to Speech",
     description: "Tool to transform written content into natural-sounding audio",
     image:
-      "589395c0-ec14-4844-9674-a27e76ef8f55.jfif",
+      "/src/assests/589395c0-ec14-4844-9674-a27e76ef8f55.jfif",
     tech: ["React", "Material-UI"],
     github: "https://text-to-speech-ur.netlify.app/",
     live: "https://text-to-speech-ur.netlify.app/",
@@ -51,7 +51,7 @@ const projects: Project[] = [
     title: "PicMosaic",
     description: "PicMosaic utilizes AI to craft diverse images from user prompts",
     image:
-      "bce36a86-265b-42fd-acb8-2388b5898189.jfif",
+      "/src/assests/bce36a86-265b-42fd-acb8-2388b5898189.jfif",
     tech: ["React", "Node.js", "OpenAi API", "Express"],
     github: "https://github.com/uraj1/PicMosaic",
     live: "https://picmosaic.netlify.app/ ",
