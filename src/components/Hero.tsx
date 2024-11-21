@@ -16,7 +16,7 @@ export default function Hero() {
           <MultilingualName />
           
           <motion.h1 
-            className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent px-4"
+            className="text-5xl md:text-6xl font-bold pb-3 mb-6 bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent px-4 "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}

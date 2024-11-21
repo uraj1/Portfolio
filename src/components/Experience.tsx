@@ -1,27 +1,30 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Briefcase, Download } from 'lucide-react';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Briefcase, Download } from "lucide-react";
 
 const experiences = [
   {
     title: "Software Developer",
     company: "Atos Syntel (Eviden)",
     period: "Jan. 2024 - April 2024",
-    description: "Developed attendance tracking, time logging, user authentication, automated birthday emails, and data export using Angular, Spring Boot, and MySQL.",
+    description:
+      "Developed attendance tracking, time logging, user authentication, automated birthday emails, and data export using Angular, Spring Boot, and MySQL.",
     side: "right",
   },
   {
     title: "GSSOC’24 Contributor",
     company: "GSSOC",
     period: "April 2024 - Aug. 2024",
-    description: "Enhanced code quality, added new features, and fixed 50+ bugs across projects, showcasing technical and collaborative expertise.",
+    description:
+      "Enhanced code quality, added new features, and fixed 50+ bugs across projects, showcasing technical and collaborative expertise.",
     side: "left",
   },
   {
     title: "Secretary",
-    company: "Colours",
+    company: "Colours (NIT KKR)",
     period: "July 2024 - Present",
-    description: "Led Colours, a mental health management club, organizing initiatives and managing a team to promote awareness and support.",
+    description:
+      "Led Colours, a mental health management club, organizing initiatives and managing a team to promote awareness and support.",
     side: "right",
   },
   // {
@@ -40,9 +43,10 @@ export default function Experience() {
   });
 
   const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = "https://drive.google.com/file/d/1Y743OnxQ78GYIJvIZjqETClXtOAesbZh/view?usp=sharing";
-    link.download = "Umang_Resume.pdf"; 
+    const link = document.createElement("a");
+    link.href =
+      "https://drive.google.com/file/d/1Y743OnxQ78GYIJvIZjqETClXtOAesbZh/view?usp=sharing";
+    link.download = "Umang_Resume.pdf";
     link.target = "_blank";
     document.body.appendChild(link);
     link.click();
@@ -52,8 +56,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="py-20 bg-gradient-to-b from-white via-white to-gray-50 dark:from-black dark:via-gray-900 dark:to-black transition-colors duration-200"
-
+      className="py-10 bg-gradient-to-b from-white via-white to-gray-50 dark:from-black dark:via-gray-900 dark:to-black transition-colors duration-200"
     >
       <div className="container mx-auto px-6">
         <motion.div
@@ -94,8 +97,11 @@ export default function Experience() {
                   {/* Timeline dot */}
                   <div className="absolute left-1/2 top-8 w-4 h-4 rounded-full bg-purple-600 transform -translate-x-1/2 border-4 border-white dark:border-gray-900 z-10"></div>
 
-                  <div className={`w-5/12 ${exp.side === "right" && "ml-auto"}`}>
+                  <div
+                    className={`w-5/12 ${exp.side === "right" && "ml-auto"}`}
+                  >
                     <div className="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg hover:shadow-xl group transition-shadow relative overflow-hidden transform transition-transform hover:scale-105">
+                      
                       {/* Gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                       <div className="flex items-start gap-4">

@@ -44,7 +44,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-20 bg-gray-50 dark:bg-black transition-colors duration-200"
+      className="py-10 bg-gray-50 dark:bg-black transition-colors duration-200"
     >
       <div className="container mx-auto px-6">
         <motion.div

@@ -11,7 +11,7 @@ export default function Footer() {
   const tools = ["MERN-Stack", "MySql", "TypeScript", "SpringBoot", "Angular"];
 
   return (
-    <footer className="py-20 bg-gradient-to-b from-white via-white to-gray-50 dark:from-black dark:to-gray-900  transition-colors duration-200"
+    <footer className="py-10 bg-gradient-to-b from-white via-white to-gray-50 dark:from-black dark:to-gray-900  transition-colors duration-200"
 >
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">

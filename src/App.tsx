@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
@@ -15,9 +14,9 @@ function App() {
       <CustomCursor />
       <Header />
       <Hero />
-      <Skills />
       <Experience />
       <Projects />
+      <Skills />
       <Contact />
       <DarkModeToggle />
       <Footer/>
