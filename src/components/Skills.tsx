@@ -1,44 +1,44 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Code, Palette, Database, Globe, Terminal, Cpu } from 'lucide-react';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Code, Palette, Database, Globe, Terminal, Cpu } from "lucide-react";
 
 const skills = [
   {
     category: "Frontend",
     icon: <Code className="w-6 h-6" />,
-    items: ["React", "TypeScript", "Next.js", "Vue.js", "Tailwind CSS", "Framer Motion"]
+    items: ["React.js", "Angular", "HTML", "Next.js","TypeScript", "Tailwind CSS", "Bootstrap"],
   },
   {
     category: "Backend",
     icon: <Terminal className="w-6 h-6" />,
-    items: ["Node.js", "Express", "Python", "Django", "PostgreSQL", "MongoDB"]
+    items: ["Spring Boot", "Node.js", "Express.js", "MongoDB", "MySQL"],
+  },
+  {
+    category: "Databases",
+    icon: <Database className="w-6 h-6" />,
+    items: ["MongoDB", "MySQL", "Firebase"],
+  },
+  {
+    category: "Languages",
+    icon: <Globe className="w-6 h-6" />,
+    items: ["Java", "JavaScript", "C"],
   },
   {
     category: "Design",
     icon: <Palette className="w-6 h-6" />,
-    items: ["Figma", "Adobe XD", "UI/UX", "Responsive Design", "Design Systems"]
+    items: ["Figma", "Adobe Illustrator", "UI/UX", "Responsive Design", "Design Systems"]
   },
   {
-    category: "DevOps",
+    category: "Others",
     icon: <Cpu className="w-6 h-6" />,
-    items: ["Docker", "AWS", "CI/CD", "Git", "Linux", "Kubernetes"]
+    items: ["GitHub", "Postman", "DSA", "OOPs"],
   },
-  {
-    category: "Database",
-    icon: <Database className="w-6 h-6" />,
-    items: ["MySQL", "MongoDB", "Redis", "GraphQL", "Firebase"]
-  },
-  {
-    category: "Other",
-    icon: <Globe className="w-6 h-6" />,
-    items: ["SEO", "Performance", "Analytics", "Testing", "Agile"]
-  }
 ];
 
 export default function Skills() {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.1,
   });
 
   return (

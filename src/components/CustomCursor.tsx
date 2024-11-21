@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function CustomCursor() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const [isInHero, setIsInHero] = useState(false);
-  const [isInteractive, setIsInteractive] = useState(false); // Track if over interactive elements
+  const [isInteractive, setIsInteractive] = useState(false);
 
   useEffect(() => {
     const updateMousePosition = (e: MouseEvent) => {
@@ -14,28 +14,27 @@ export default function CustomCursor() {
 
     const updateHoverState = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      // Check if the target is an interactive element
+
       const isInteractiveElement =
-        target.tagName === 'A' ||
-        target.tagName === 'BUTTON' ||
-        target.closest('a') !== null ||
-        target.closest('button') !== null;
+        target.tagName === "A" ||
+        target.tagName === "BUTTON" ||
+        target.closest("a") !== null ||
+        target.closest("button") !== null;
 
       setIsHovering(isInteractiveElement);
       setIsInteractive(isInteractiveElement);
-      setIsInHero(!!target.closest('#hero'));
+      setIsInHero(!!target.closest("#hero"));
     };
 
-    window.addEventListener('mousemove', updateMousePosition);
-    window.addEventListener('mouseover', updateHoverState);
+    window.addEventListener("mousemove", updateMousePosition);
+    window.addEventListener("mouseover", updateHoverState);
 
     return () => {
-      window.removeEventListener('mousemove', updateMousePosition);
-      window.removeEventListener('mouseover', updateHoverState);
+      window.removeEventListener("mousemove", updateMousePosition);
+      window.removeEventListener("mouseover", updateHoverState);
     };
   }, []);
 
-  // Hide the custom cursor when not in the #hero section or over interactive elements
   if (!isInHero || isInteractive) return null;
 
   return (

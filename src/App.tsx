@@ -7,6 +7,7 @@ import Contact from './components/Contact';
 import DarkModeToggle from './components/DarkModeToggle';
 import CustomCursor from './components/CustomCursor';
 import Footer from './components/Footer';
+import DemoProjects from './components/DemoProject';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Hero />
       <Experience />
       <Projects />
+      <DemoProjects/>
       <Skills />
       <Contact />
       <DarkModeToggle />
