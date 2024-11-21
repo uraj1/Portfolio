@@ -56,7 +56,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="py-10 bg-gradient-to-b from-white via-white to-gray-50 dark:from-black dark:via-gray-900 dark:to-black transition-colors duration-200"
+      className="py-20 bg-gradient-to-b from-white via-white to-gray-50 dark:from-black dark:via-gray-900 dark:to-black transition-colors duration-200"
     >
       <div className="container mx-auto px-6">
         <motion.div

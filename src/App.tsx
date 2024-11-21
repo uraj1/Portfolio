@@ -2,7 +2,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
-import Projects from './components/Projects';
+// import Projects from './components/Projects';
 import Contact from './components/Contact';
 import DarkModeToggle from './components/DarkModeToggle';
 import CustomCursor from './components/CustomCursor';
@@ -16,7 +16,7 @@ function App() {
       <Header />
       <Hero />
       <Experience />
-      <Projects />
+      {/* <Projects /> */}
       <DemoProjects/>
       <Skills />
       <Contact />
