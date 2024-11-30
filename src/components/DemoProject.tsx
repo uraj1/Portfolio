@@ -93,6 +93,16 @@ export default function DemoProjects() {
             deliver impactful solutions. Explore the code repositories and live
             demos to see them in action!
           </p>
+          <a
+            href="https://github.com/uraj1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="mt-4 flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-700 text-white dark:bg-gray-800 dark:text-white hover:bg-purple-600 dark:hover:bg-gray-700 transition-colors font-medium shadow-md">
+              <Github className="w-5 h-5" />
+              Explore More Projects
+            </button>
+          </a>
         </motion.div>
 
         <motion.div

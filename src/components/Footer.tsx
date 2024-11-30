@@ -8,7 +8,7 @@ export default function Footer() {
     { icon: <Mail className="w-5 h-5" />, href: "mailto:umangraj1001@gmail.com", label: "Email" },
   ];
 
-  const tools = ["MERN-Stack", "MySql", "TypeScript", "SpringBoot", "Angular"];
+  const tools = ["MERN-Stack", "MySql", "TypeScript", "SpringBoot", "Angular and many more..."];
 
   return (
     <footer className="py-10 bg-gradient-to-b from-white via-white to-gray-50 dark:from-black dark:to-gray-900  transition-colors duration-200"
