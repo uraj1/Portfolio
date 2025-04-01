@@ -30,7 +30,7 @@ const projects: Project[] = [
     title: "GitHub Repo. Viewer",
     description: "This web app showcases a user's profile, bio and location.",
     image:
-      "/src/assests/freepik__candid-image-photography-natural-textures-highly-r__51079.jpeg",
+      "https://img.freepik.com/premium-vector/chat-vector-icon_676179-133.jpg",
     tech: ["React", "Tailwind CSS"],
     github: "https://github.com/uraj1/Github-Repo-Viewer",
     live: "https://github-repositories-viewer.netlify.app/",
