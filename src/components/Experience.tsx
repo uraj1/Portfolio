@@ -27,13 +27,14 @@ const experiences = [
       "Led Colours, a mental health management club, organizing initiatives and managing a team to promote awareness and support.",
     side: "right",
   },
-  // {
-  //   title: "Junior Developer",
-  //   company: "Startup Inc",
-  //   period: "2017 - 2018",
-  //   description: "Developed and maintained various web applications using modern technologies.",
-  //   side: "left",
-  // },
+  {
+    title: "Design Head & Logistics Head",
+    company: "TEDx NIT Kurukshetra",
+    period: "April 2023 - March. 2025",
+    description:
+      "Led the creative direction and logistical planning for TEDx events, managing a team of 20+ designers and coordinating end-to-end event execution, ensuring impactful branding and smooth operations.",
+    side: "left",
+  },
 ];
 
 export default function Experience() {
@@ -66,7 +67,7 @@ export default function Experience() {
           transition={{ duration: 0.5 }}
           className="max-w-6xl mx-auto"
         >
-          <div className="flex justify-between items-center mb-12">
+          <div className="flex justify-between items-center mb-12 flex-wrap gap-4">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
               Professional Experience
             </h2>
@@ -81,7 +82,7 @@ export default function Experience() {
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-purple-200 dark:bg-purple-800 transform -translate-x-1/2"></div>
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-purple-200 dark:bg-purple-800 transform -translate-x-1/2"></div>
 
             <div className="space-y-12">
               {experiences.map((exp, index) => (
@@ -90,18 +91,19 @@ export default function Experience() {
                   initial={{ opacity: 0, x: exp.side === "left" ? -20 : 20 }}
                   animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
-                  className={`relative flex ${
+                  className={`relative flex md:${
                     exp.side === "left" ? "justify-start" : "justify-end"
-                  } w-full`}
+                  } justify-center w-full`}
                 >
                   {/* Timeline dot */}
-                  <div className="absolute left-1/2 top-8 w-4 h-4 rounded-full bg-purple-600 transform -translate-x-1/2 border-4 border-white dark:border-gray-900 z-10"></div>
+                  <div className="hidden md:block absolute left-1/2 top-8 w-4 h-4 rounded-full bg-purple-600 transform -translate-x-1/2 border-4 border-white dark:border-gray-900 z-10"></div>
 
                   <div
-                    className={`w-5/12 ${exp.side === "right" && "ml-auto"}`}
+                    className={`w-full md:w-5/12 ${
+                      exp.side === "right" ? "md:ml-auto" : "md:mr-auto"
+                    }`}
                   >
                     <div className="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg hover:shadow-xl group transition-shadow relative overflow-hidden transform transition-transform hover:scale-105">
-                      
                       {/* Gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                       <div className="flex items-start gap-4">

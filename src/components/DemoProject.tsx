@@ -42,7 +42,7 @@ const projects: Project[] = [
     image:
       "https://media-hosting.imagekit.io/f76067085ca24258/589395c0-ec14-4844-9674-a27e76ef8f55.jfif?Expires=1838130251&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=wfygwEW1LkEzMO8riy9WZVT~Mw52IAx7Hih8a-0ZRqOLsztNa~HkPCa749YlVCshl-J6-6-Yhlbsn9hmnvZSzJt5KmLZnU2txyD5N4Ad1ewlm9m9vRSNcpKcxkQ1LS41buxJQ0QeY19mdLs9Vmh~Rqkl--DjoX5gYRlit20Un6ze79fhEaXE8sFMbZNTr4h3k~Jx8JV8CNREmlo-zhZVCMMa7YPR4AXqtaJ-wq1x072Hj86BcU7x4RGjiFWU6t7uAUvp2iDnHoK8Oq~rK8h7nnWvkwarSjYmjzzHCn4d7MDHg2H3xRDrRsJumAJwcnuaB93G9aihyLzSofAgMhmHLA__",
     tech: ["React", "Material-UI"],
-    github: "https://text-to-speech-ur.netlify.app/",
+    github: "https://github.com/uraj1/Text-To-Speech-Converter",
     live: "https://text-to-speech-ur.netlify.app/",
     size: "medium",
   },
