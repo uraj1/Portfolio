@@ -1,9 +1,9 @@
-import  { useState, FormEvent } from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Mail, Phone, MapPin, Loader2 } from 'lucide-react';
-import emailjs from '@emailjs/browser';
-import toast, { Toaster } from 'react-hot-toast';
+import { useState, FormEvent } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Mail, Phone, MapPin, Loader2 } from "lucide-react";
+import emailjs from "@emailjs/browser";
+import toast, { Toaster } from "react-hot-toast";
 
 interface FormData {
   name: string;
@@ -12,9 +12,9 @@ interface FormData {
 }
 
 const initialFormData: FormData = {
-  name: '',
-  email: '',
-  message: ''
+  name: "",
+  email: "",
+  message: "",
 };
 
 export default function Contact() {
@@ -22,7 +22,7 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.1,
   });
 
   const handleSubmit = async (e: FormEvent) => {
@@ -31,36 +31,64 @@ export default function Contact() {
 
     try {
       await emailjs.send(
-        'service_sb6vzws', // EmailJS service ID
-        'template_aj4eer5', // EmailJS template ID
+        "service_sb6vzws", // EmailJS service ID
+        "template_aj4eer5", // EmailJS template ID
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
         },
-        'hXFroYNGTbwQUm9NK' //EmailJS public key
+        "hXFroYNGTbwQUm9NK" //EmailJS public key
       );
 
-      toast.success('Message sent successfully!');
+      toast.success("Message sent successfully!");
       setFormData(initialFormData);
     } catch (error) {
-      toast.error('Failed to send message. Please try again.');
+      toast.error("Failed to send message. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
+  };
+  const getToastStyle = () => {
+    const isDark =
+      typeof window !== "undefined" &&
+      document.documentElement.classList.contains("dark");
+    return {
+      background: isDark ? "#1f2937" : "#fff",
+      color: isDark ? "#f3f4f6" : "#333",
+      border: isDark ? "1px solid #374151" : "none",
+    };
   };
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-black transition-colors duration-200">
-      <Toaster position="top-right" />
+    <section
+      id="contact"
+      className="py-20 bg-white dark:bg-black transition-colors duration-200"
+    >
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          style: getToastStyle(),
+          duration: 4000,
+          success: {
+            iconTheme: {
+              primary: "#9333ea",
+              secondary: "#fff",
+            },
+          },
+        }}
+      />
+
       <div className="container mx-auto px-6">
         <motion.div
           ref={ref}
@@ -69,10 +97,14 @@ export default function Contact() {
           transition={{ duration: 0.5 }}
           className="max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">Get in Touch</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">
+            Get in Touch
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-xl font-semibold mb-6 dark:text-white">Contact Information</h3>
+              <h3 className="text-xl font-semibold mb-6 dark:text-white">
+                Contact Information
+              </h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-full flex items-center justify-center">
@@ -80,8 +112,11 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-gray-600 dark:text-gray-400">Email</p>
-                    <a href="mailto:umangraj1001@gmail.com" className="text-purple-600 dark:text-purple-400 hover:underline">
-                    umangraj1001@gmail.com
+                    <a
+                      href="mailto:umangraj1001@gmail.com"
+                      className="text-purple-600 dark:text-purple-400 hover:underline"
+                    >
+                      umangraj1001@gmail.com
                     </a>
                   </div>
                 </div>
@@ -91,7 +126,10 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-gray-600 dark:text-gray-400">Phone</p>
-                    <a href="tel:+91-7766014193" className="text-purple-600 dark:text-purple-400 hover:underline">
+                    <a
+                      href="tel:+91-7766014193"
+                      className="text-purple-600 dark:text-purple-400 hover:underline"
+                    >
                       +91-7766014193
                     </a>
                   </div>
@@ -102,7 +140,9 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-gray-600 dark:text-gray-400">Location</p>
-                    <p className="text-purple-600 dark:text-purple-400">Ranchi, India</p>
+                    <p className="text-purple-600 dark:text-purple-400">
+                      Ranchi, India
+                    </p>
                   </div>
                 </div>
               </div>
@@ -110,7 +150,10 @@ export default function Contact() {
             <div>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                  >
                     Name
                   </label>
                   <input
@@ -124,7 +167,10 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                  >
                     Email
                   </label>
                   <input
@@ -138,7 +184,10 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                  >
                     Message
                   </label>
                   <textarea
@@ -162,7 +211,7 @@ export default function Contact() {
                       Sending...
                     </>
                   ) : (
-                    'Send Message'
+                    "Send Message"
                   )}
                 </button>
               </form>
