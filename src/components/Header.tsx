@@ -6,6 +6,17 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const handleMobileNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    setIsOpen(false);
+  
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      el?.scrollIntoView({ behavior: 'smooth' });
+    }, 300);
+  };
+  
+
   return (
     <motion.header
       initial={{ y: -100, opacity: 0 }}
@@ -73,16 +84,16 @@ export default function Header() {
             className="md:hidden px-6 overflow-hidden"
           >
             <div className="flex flex-col gap-4 text-gray-800 dark:text-gray-300 pb-4">
-              <a href="#skills" onClick={() => setIsOpen(false)} className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+              <a href="#skills" onClick={(e) => handleMobileNavClick(e, 'skills')} className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                 Skills
               </a>
-              <a href="#experience" onClick={() => setIsOpen(false)} className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+              <a href="#experience" onClick={(e) => handleMobileNavClick(e, 'experience')} className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                 Experience
               </a>
-              <a href="#projects" onClick={() => setIsOpen(false)} className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+              <a href="#projects" onClick={(e) => handleMobileNavClick(e, 'projects')} className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                 Projects
               </a>
-              <a href="#contact" onClick={() => setIsOpen(false)} className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+              <a href="#contact" onClick={(e) => handleMobileNavClick(e, 'contact')} className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                 Contact
               </a>
 
