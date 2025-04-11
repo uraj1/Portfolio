@@ -31,7 +31,8 @@ export default function Header() {
           transition={{ delay: 0.2 }}
           className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent"
         >
-          Portfolio
+          <a href="#hero">
+          Portfolio </a>
         </motion.div>
 
         {/* Hamburger Button */}
