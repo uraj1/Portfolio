@@ -46,7 +46,7 @@ export default function Experience() {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href =
-      "https://drive.google.com/file/d/15fBoZFOotbIxH17hVR6n_fMGJXHEqAzb/view?usp=sharing";
+      "https://drive.google.com/file/d/1kGASR-QWfHahd3iVxolq0ibDKAcR7k4s/view?usp=sharing";
     link.download = "Umang_Resume.pdf";
     link.target = "_blank";
     document.body.appendChild(link);
