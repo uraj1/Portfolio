@@ -16,34 +16,34 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "CryptoXplorer",
+    title: "TEDx",
     description:
-      "A crypto app which is made using React Js and its UI library. ",
+      "TEDx Ticket Management System.",
     image:
-      "https://media-hosting.imagekit.io/1555d82972c54041/freepik__crypto-currency__51080.jpeg?Expires=1838130251&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=WfviHKf5S6xpGoWeH07vkHQcrRsAY8eWurgACJ~xr547uor6Dhh5csOurOjABso8M9jX5LpQZqYFm~dXZsQ6naRZGvmEb-amcSqMP9Ftf6Ta87sH0gUIhQ8T6Pm5qGXD0uohPZA5ZL8KwiwAR3Efj8FgH7N8pZa-qpbafb5EY8ijzVUNRP5MGCRPw82x-kudci86pFrFtFUtGbbX937VWlCYwWGbzpz~X9upo7a9-fBkiwJ1oDTI2fD2lAF42aXIiFOHnSrDq2nRbtgrCq2SMs1ZscEECVGFJ8V6FCJH9TlnrFgjiQ6EsogwIwwL-h4IzP8ddXcDzGiWa21M9h5wYg__",
-    tech: ["React", "Chakra UI", "Node.js", "REST API"],
-    github: "https://github.com/uraj1/CryptoXplorer",
-    live: "https://cryptoxplorerapp.netlify.app/",
+      "https://ik.imagekit.io/5poacinagy/329899451_1144956879500866_3716318260480301041_n-pica.png?updatedAt=1749399324452",
+    tech: ["React", "MongoDB", "Node.js"],
+    github: "https://github.com/uraj1/tickets-backend",
+    live: "https://github.com/uraj1/tickets-backend",
     size: "large",
   },
   {
-    title: "GitHub Repo. Viewer",
-    description: "This web app showcases a user's profile, bio and location.",
+    title: "CryptoXplorer",
+    description: "A crypto app which is made using React Js and its UI library.",
     image:
-      "https://media-hosting.imagekit.io/5a34c87a8ed14b8c/freepik__candid-image-photography-natural-textures-highly-r__51079.jpeg?Expires=1838130251&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=mqnJ39YpFn5~vi9emzA7fytWHnI1GT8h8YShmlOqiiVIMuyLg-OCIKWrTB10MWxnx2OC9HsGTYtpUiN9PM5UK7shVANabKLSjWWbQpnOfBB2TxWoAudHq~Z~X8biGzqbqJt3L6QaaDfMijTem~C7sfizMKlEfmhHTLHl9MQ8Z4pj2aLgHhaaH6opgA0TidzhiSNoOC-kzxgWa5N0bRci2r7c5P06FkLHw2CfoBBN~ZKPgG7jFiKd5myLk09JF9FI~tSXI~PSFAfq5RP276djvw3PyqT9H05AmM7Q5Jxsu2LD8JBle-fQLz2HoIi7RBlcmmcCB1NcdvYR25q7zCsi2A__",
-    tech: ["React", "Tailwind CSS"],
-    github: "https://github.com/uraj1/Github-Repo-Viewer",
-    live: "https://github-repositories-viewer.netlify.app/",
+      "https://img.freepik.com/premium-photo/bitcoin-btc-cryptocurrency-coins-black-background_35652-2620.jpg?w=826",
+    tech: ["React", "REST API"],
+    github: "https://github.com/uraj1/CryptoXplorer",
+    live: "https://cryptoxplorerapp.netlify.app/",
     size: "medium",
   },
   {
-    title: "Text to Speech",
-    description: "Tool to transform written content into natural-sounding audio",
+    title: "VisualizeX",
+    description: "Tool to visualize your .csv files in one click",
     image:
-      "https://media-hosting.imagekit.io/f76067085ca24258/589395c0-ec14-4844-9674-a27e76ef8f55.jfif?Expires=1838130251&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=wfygwEW1LkEzMO8riy9WZVT~Mw52IAx7Hih8a-0ZRqOLsztNa~HkPCa749YlVCshl-J6-6-Yhlbsn9hmnvZSzJt5KmLZnU2txyD5N4Ad1ewlm9m9vRSNcpKcxkQ1LS41buxJQ0QeY19mdLs9Vmh~Rqkl--DjoX5gYRlit20Un6ze79fhEaXE8sFMbZNTr4h3k~Jx8JV8CNREmlo-zhZVCMMa7YPR4AXqtaJ-wq1x072Hj86BcU7x4RGjiFWU6t7uAUvp2iDnHoK8Oq~rK8h7nnWvkwarSjYmjzzHCn4d7MDHg2H3xRDrRsJumAJwcnuaB93G9aihyLzSofAgMhmHLA__",
-    tech: ["React", "Material-UI"],
-    github: "https://github.com/uraj1/Text-To-Speech-Converter",
-    live: "https://text-to-speech-ur.netlify.app/",
+      "https://img.freepik.com/premium-vector/csv-file-data-icons-with-flat-graphic-design-style-document-files-format-symbol-icon_715029-362.jpg?w=826",
+    tech: ["Next.js", "PostgreSQL"],
+    github: "https://github.com/uraj1/VisualizeX",
+    live: "https://visualizex.vercel.app/",
     size: "medium",
   },
   
@@ -51,7 +51,7 @@ const projects: Project[] = [
     title: "PicMosaic",
     description: "PicMosaic utilizes AI to craft diverse images from user prompts",
     image:
-      "https://media-hosting.imagekit.io/96d8ec90d6904d3d/bce36a86-265b-42fd-acb8-2388b5898189.jfif?Expires=1838130251&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=dDn1QA9Qi5ZG6~TsLL61gC7840vteHfdCFs8G5hEaCh5cGQ6y3BNSFe8rEfKKXlffpSB9q~5PrdUFB-PmnX-~PH65DLXdVglUXlKJEtc3sc094SU4ZUfNtn4a-OIHb1JJfsmwfqUXR0j9Avrk15EGzCT4rnn8XSQp4~W225aYQTF11oOEjcYsvd~dAVYTEFSdPARPucDYGkZEsrK6lv9vLCluHFsZ2NWVSauBPH4nVji~1rVCDuw3Wp8sqa7nSAS912SwMHsY1Dw2OEfed4zMzKj0ktCdziY8JTPgIdz8VQbPMWEObLU7Aw6Sg7OkI2P8giewbM6PNfcAnBQ3m383w__",
+      "https://www.piclumen.com/wp-content/uploads/2024/10/piclumen-marquee-06.webp",
     tech: ["React", "Node.js", "OpenAi API", "Express"],
     github: "https://github.com/uraj1/PicMosaic",
     live: "https://picmosaic.netlify.app/ ",
